@@ -1,0 +1,17 @@
+For:
+
+1. int: - Inputting a single character returns character once, then 0, then remaining defined variables. No more inputs allowed
+        - Inputting number with single decimal place returns same number, then number reduced to whole integer, then remaining defined variables. No more inputs allowed.
+        - Inputting number with more than one decimal place returns same number, then number reduced to whole integer, then remaining defined variables. No more inputs allowed.
+
+2. char: - Inputting number with single decimal place returns same number, then number reduced to whole integer, then remaining defined variables. No more inputs allowed.
+         - Inputting number with more than one decimal place returns same number, then number reduced to whole integer, then remaining defined variables. No more inputs allowed.
+
+3. bool: - Inputting number other than 1 or 0 returns same number, then remaining defined variables. No more inputs allowed.
+         - Inputting number with one decimal place returns same number, then number reduced to whole integer, then remaining defined variables. No more inputs allowed.
+         - Inputting number with more than one decimal place returns same number, then number reduced to whole integer, then remaining defined variables. No more inputs allowed.
+         - Inputting a single character returns character once, then 0, then remaining defined variables. No more inputs allowed.
+
+4. float: - Inputting a single character returns character once, then 0, then remaining defined variables. No more inputs allowed
+
+5. double: - Inputting a single character returns character once, then 0, then remaining defined variables. No more inputs allowed.
