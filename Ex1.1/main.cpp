@@ -1,6 +1,9 @@
 #include <iostream>
+#include <string>
 
 int main() {
-    std::cout << "Eureka!" << std::endl;
+    std::string message = "Eureka";
+    std::cin >> message;
+    std::cout << message << std::endl;
     return 0;
 }
