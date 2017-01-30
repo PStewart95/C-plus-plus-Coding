@@ -1,1 +1,0 @@
-Examples of code can be found in this project.;

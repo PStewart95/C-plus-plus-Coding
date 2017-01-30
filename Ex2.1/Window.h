@@ -109,7 +109,7 @@ public:
 		currentLine.clear();
 	}
 
-	void setPenAngle(float angle) {
+	void penSetAngle(float angle) {
 		currentAngle = angle * M_PI / 180.;
 	}
 
