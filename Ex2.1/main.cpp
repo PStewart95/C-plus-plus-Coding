@@ -1,13 +1,6 @@
-/*
- * main.cpp
- *
- *  Created on: 18 Dec 2014
- *      Author: apw253
- */
-
+#define _USE_MATHS_DEFINES
+#include <cmath>
 #include "Window.h"
-
-
 
 int main(int argc, char * argv[]) {
 // create a new window of size 500 x 500 pixels
@@ -24,14 +17,31 @@ int main(int argc, char * argv[]) {
 	 * window.penForward(float distance) move the pen forward
 	 * window.stopLine() to stop the current line
 */
+	int a=0;
+	int b=250;
 
-	/* uncomment the following lines to see a working example of how to draw lines
-	window.startNewLine(0,250);
-	window.penForward(250);
+	window.startNewLine(b,a);
 	window.penRotateDegrees(90);
-	window.penForward(250);
+	window.penForward(500);
 	window.stopCurrentLine();
-	 */
+
+	window.startNewLine(a,b);
+	window.penSetAngle(0);
+	window.penForward(500);
+	window.stopCurrentLine();
+
+	int x=250-100;
+	int y= (250-(100*tan((M_PI)/6)));
+
+	window.startNewLine(x,y);
+	window.penSetAngle(0);
+	int n=3;
+	for(int i=0;i<n;++i) {
+		window.penForward(200);
+		window.penRotateDegrees(120);
+	}
+
+	window.stopCurrentLine();
 
 	// display the window
 	window.display();
