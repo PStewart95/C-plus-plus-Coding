@@ -17,18 +17,20 @@ int main(int argc, char * argv[]) {
 	 * window.penForward(float distance) move the pen forward
 	 * window.stopLine() to stop the current line
 */
-	int a=0;
-	int b=250;
+	int a=250;
+	int b=0;
 
-	window.startNewLine(b,a);
+	window.startNewLine(a,b);
 	window.penRotateDegrees(90);
 	window.penForward(500);
 	window.stopCurrentLine();
 
-	window.startNewLine(a,b);
+	window.startNewLine(b,a);
 	window.penSetAngle(0);
 	window.penForward(500);
 	window.stopCurrentLine();
+
+/* Code to Draw a triangle below */
 
 	int x=250-100;
 	int y= (250-(100*tan((M_PI)/6)));
@@ -40,6 +42,23 @@ int main(int argc, char * argv[]) {
 		window.penForward(200);
 		window.penRotateDegrees(120);
 	}
+
+	window.stopCurrentLine();
+
+/* Code to draw a Heptagon Below */
+
+	int h=250-100;
+	double f=(tan((90-360/14))*(M_PI)/180);
+	int g=50-(100*f);
+
+	window.startNewLine(h,g);
+	window.penSetAngle(0);
+	int c=7;
+	for(int i=0;i<c;++i) {
+		window.penForward(200);
+		window.penRotateDegrees(51.43);
+	}
+
 
 	window.stopCurrentLine();
 
