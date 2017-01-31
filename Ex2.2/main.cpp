@@ -1,3 +1,10 @@
+/*
+ * main.cpp
+ *
+ *  Created on: 18 Dec 2014
+ *      Author: apw253
+ */
+
 #include "Window.h"
 
 
