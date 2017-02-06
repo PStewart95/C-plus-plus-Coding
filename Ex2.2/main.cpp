@@ -1,17 +1,24 @@
 #include "Window.h"
 
 
-
 int main(int argc, char * argv[]) {
 
     int nSides;
     do {
     std::cin >> nSides;
+    bool isGood = std::cin.good();
+    if (isGood) {}
+        else { return 0;
+    }
     } while(nSides<3);
 
     int sideLength;
     do{
     std::cin>>sideLength;
+    bool isGood = std::cin.good();
+    if (isGood) {}
+    else { return 0;
+    }
     } while(sideLength<1);
 
 // create a new window of size 500 x 500 pixels
@@ -34,5 +41,3 @@ int main(int argc, char * argv[]) {
 	// program will end when you close the window
 	return Fl::run();
 }
-
-
