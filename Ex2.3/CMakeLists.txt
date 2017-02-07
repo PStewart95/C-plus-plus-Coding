@@ -5,11 +5,11 @@ cmake_minimum_required(VERSION 3.3)
 # so for a project called Ex2.1 you need
 # project(Ex2_1)
 #
-project(XXXXXX)
+project(Ex2.3)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}-std=c++11")
 
-set(SOURCE_FILES main.cpp Window.cpp Window.h functions.cpp)
+set(SOURCE_FILES main.cpp Window.cpp Window.h functions.cpp functions.h)
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 set(mingw true)
