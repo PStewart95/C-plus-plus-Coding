@@ -1,11 +1,6 @@
 cmake_minimum_required(VERSION 3.3)
-#
-# Change this line to the name of your project
-# exchange "." in the name for "_"
-# so for a project called Ex2.1 you need
-# project(Ex2_1)
-#
-project(FLTK_File)
+
+project(Ex2.6)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}-std=c++11")
 
