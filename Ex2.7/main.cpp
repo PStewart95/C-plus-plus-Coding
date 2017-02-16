@@ -9,7 +9,6 @@
 #include "Colours.h"
 #include "functions.h"
 #include <fstream>
-#include <string>
 
 using namespace std;
 
@@ -28,8 +27,10 @@ int main(int argc, char * argv[]) {
 
     readPointsFromStream( n, xvec, yvec, myInputFile);
 
-    for (int i=0; i=n; ++i)
+    for (int i=0; i<n; ++i) {
 
+        cout << xvec[i] << "," << yvec[i] << endl;
+    }
     window.show(argc,argv);
 
 	return Fl::run();
