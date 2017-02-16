@@ -26,13 +26,13 @@ void readPointsFromStream(int n, std::vector<float> & xvec, std::vector <float> 
 
     }
 } void drawPoints(SPA::Window & window, std::vector <float> & xvec, std::vector <float> & yvec )
-    {
-        int n=xvec.size();
+{
+    int n=xvec.size();
 
-        for(int i=0; i<n; ++i){
+    for(int i=0; i<n; ++i){
 
-            window.addPoint(xvec[i],yvec[i]);
+        window.addPoint(xvec[i],yvec[i]);
 
     }
-        window.stopCurrentLine();
+    window.stopCurrentLine();
 }
