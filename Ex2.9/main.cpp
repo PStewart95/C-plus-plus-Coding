@@ -13,42 +13,61 @@ using namespace SPA;
 
 
 int main(int argc, char * argv[]) {
-// create a new window of size 500 x 500 pixels
-// the top left corner of the window is (0,0)
-	SPA::Window window(500,500,"My Test",24);
-	Fl::visual(FL_DOUBLE | FL_INDEX);
 
-	// Add code here to draw things
-	Shape * shape = new Shape(250,250,0);
-	shape->setRotationSpeed(2); // initial rotation speed in degrees
-	// make a new line
-	Line * line = new Line();
-	// allowed colours are specified in the enum in Colours.hpp
-	line->setColor(getColor(BLACK));
-	// add a point to the line
-	// these points are all relative to the centre of the Shape
-	line->addPoint(Point(-100,-100));
-	line->addPoint(Point(100,-100));
-	line->addPoint(Point(100,100));
-	line->addPoint(Point(-100,100));
-	line->addPoint(Point(-100,-100));
-	// add this line to the shape
-	shape->addLine(line);
-	// add the shape to the window
-	window.addShape(shape);
-	// notice the use of . notation for the window
-	// and contrast with the use of -> notation for the shape and line
+    SPA::Window window(500,500,"My Test",24);
+    Fl::visual(FL_DOUBLE | FL_INDEX);
 
-	// add your code here!
+    Shape * shape = new Shape(250,250,0);
+    shape->setRotationSpeed(2);
 
+    Line * line = new Line();
 
-	////////
-	// display the window
-	window.show(argc,argv);
-	// run the FLTK event loop - this allows you to move the window around etc
-	// and ultimately set up click events.
-	// program will end when you close the window
-	return Fl::run();
+    line->setColor(getColor(BLACK));
+
+    line->addPoint(Point(-100,-100));
+    line->addPoint(Point(100,-100));
+    line->addPoint(Point(100,100));
+    line->addPoint(Point(-100,100));
+    line->addPoint(Point(-100,-100));
+
+    shape->addLine(line);
+
+    window.addShape(shape);
+
+    Shape * triangle = new Shape(250,250,0);
+    triangle->setRotationSpeed(4);
+
+    Line * line2 = new Line();
+
+    line2->setColor(getColor(RED));
+
+    int a=50;
+    float x = (a/2.0);
+    float y = ((a*tan(M_PI/6.0))/2);
+    float z = a/(2*cos(M_PI/6.0));
+
+    line2->addPoint(Point(150-x-250,150-y-250));
+    line2->addPoint(Point(150-250,150+z-250));
+    line2->addPoint(Point(150+x-250,150-y-250));
+    line2->addPoint(Point(150-x-250,150-y-250));
+    triangle->addLine(line2);
+    window.addShape(triangle);
+
+    Shape * triangle1 = new Shape(250,250,0);
+    triangle1->setRotationSpeed(-4);
+
+    Line * line3 = new Line();
+
+    line3->setColor(getColor(BLUE));
+
+    line3->addPoint(Point(350-x-250,350-y-250));
+    line3->addPoint(Point(350-250,350+z-250));
+    line3->addPoint(Point(350+x-250,350-y-250));
+    line3->addPoint(Point(350-x-250,350-y-250));
+
+    triangle1->addLine(line3);
+    window.addShape(triangle1);
+    window.show(argc,argv);
+
+    return Fl::run();
 }
-
-
