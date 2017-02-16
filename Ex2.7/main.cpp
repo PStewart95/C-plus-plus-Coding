@@ -26,6 +26,7 @@ int main(int argc, char * argv[]) {
     vector<float> yvec;
 
     readPointsFromStream( n, xvec, yvec, myInputFile);
+    drawPoints(window, xvec, yvec);
 
     for (int i=0; i<n; ++i) {
 
