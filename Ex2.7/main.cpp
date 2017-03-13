@@ -17,11 +17,11 @@ int main(int argc, char * argv[]) {
     SPA::Window window(500, 500, "My Test");
 
     ifstream myInputFile;
-    myInputFile.open("G:/points3.dat");
+    myInputFile.open("/data/hays/Teaching/2016-17/marking/points3.dat");
      while (myInputFile.good()) {
 
         int n;
-        myInputFile >> n;
+        myInputFile >> n; //-- RS: You should have a stream state test here, -1
         vector<float> xvec;
         vector<float> yvec;
         readPointsFromStream(n, xvec, yvec, myInputFile);
@@ -29,7 +29,8 @@ int main(int argc, char * argv[]) {
 
         window.show(argc, argv);
         myInputFile.close();
-
+        //-- RS: You should have a loop over the vectors and print their values to console, -1
         return Fl::run();
 
 }
+//-- 15/18

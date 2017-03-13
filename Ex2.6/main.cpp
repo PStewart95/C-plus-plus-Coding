@@ -16,7 +16,7 @@ int main(int argc, char * argv[]) {
 // the top left corner of the window is (0,0)
     SPA::Window window(500,500,"My Test");
 
-    ifstream fin("G:/points2.dat");
+    ifstream fin("/data/hays/Teaching/2016-17/marking/points2.dat");
     int npoints;
     fin >> npoints;
     cout << npoints << endl;
@@ -30,7 +30,7 @@ int main(int argc, char * argv[]) {
 
     window.addPoint(a,b);
 
-    if (!fin.good() ) break;
+    if (!fin.good() ) break; //-- RS: You need to check the file state before you call addPoint. How do you know a and b are valid? -1
 
     }
 
@@ -40,3 +40,4 @@ int main(int argc, char * argv[]) {
 
 return Fl::run();
 }
+//-- 6/7

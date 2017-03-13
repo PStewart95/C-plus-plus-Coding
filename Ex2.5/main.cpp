@@ -16,7 +16,7 @@ int main(int argc, char * argv[]) {
 // the top left corner of the window is (0,0)
 	SPA::Window window(500,500,"My Test");
 
-    ifstream myInputFile ("G:/points.dat");
+    ifstream myInputFile ("/data/hays/Teaching/2016-17/marking/SectionC/points.dat");
 
     int a;
     int b;
@@ -39,3 +39,4 @@ int main(int argc, char * argv[]) {
 }
 
 
+//-- 7/7

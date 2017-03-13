@@ -21,7 +21,7 @@ void readPointsFromStream(int n, std::vector<float> & xvec, std::vector <float> 
         xvec.push_back(a);
         yvec.push_back(b);
 
-        if (!f.good())
+        if (!f.good()) //-- RS: Stream state should be tested before pushing to vector, -1
             break;
 
     }

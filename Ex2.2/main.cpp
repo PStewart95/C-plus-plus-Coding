@@ -27,7 +27,7 @@ int main(int argc, char * argv[]) {
 
 	int n=nSides;
     int a=(250-(sideLength/2));
-    int b= (250-((sideLength/2)*tan((90-(360/(2*n))))*(M_PI/180)));
+    int b= (250-((sideLength/2)*tan((90-(360/(2*n))))*(M_PI/180))); //-- RS: Something isn't right here as the shape isn't drawing at the correct Y coordinate, -1
     window.startNewLine (a,b);
     window.penSetAngle (0);
     for(int i=0;i<n;++i)
@@ -41,3 +41,4 @@ int main(int argc, char * argv[]) {
 	// program will end when you close the window
 	return Fl::run();
 }
+//-- 11/12
