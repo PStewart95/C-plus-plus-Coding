@@ -1,6 +1,6 @@
 #include <iostream>
 
-void addAB(float & a, float & b, float & c) {
+void addAB(float a, float b, float & c) {
     c = a + b;
 }
 
